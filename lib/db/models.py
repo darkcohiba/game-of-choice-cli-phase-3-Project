@@ -13,10 +13,8 @@ class User(Base):
     id = Column(Integer())
     username = Column(String())
     password = Column(String())
-    score = Column(String())
-    
-    # 1.a ✅ Add  ForeignKey('owners.id') to owner_id
-    weapon_id = Column(Integer(), ForeignKey('weapon.id'))
+    score = Column(String())    
+    weapon_id = Column(Integer(), ForeignKey('weapons.id'))
     
     def __repr__(self):
         return f"Id: {self.id}, " \
